@@ -1,18 +1,19 @@
-const generateContentT = require("../services/ai.service.js");
-// const generateContent = require("../services/ai.service");
+const { getReviewFromOpenAI } = require("../services/ai.service");
 
-module.exports.getReview = async (req, res) => {
-  const code = req.body.code;
+const reviewCode = async (req, res) => {
+  const { code, language } = req.body;
 
-  if (!code) {
-    return res.status(400).send("Prompt is required");
+  if (!code || !language) {
+    return res.status(400).json({ error: "Code and language are required" });
   }
 
   try {
-    const response = await generateContentT(code);
-    res.send(response);
-  } catch (error) {
-    console.error("Error generating content:", error);
-    res.status(500).send("Internal Server Error");
+    const review = await getReviewFromOpenAI(code, language);
+    res.json({ review });
+  } catch (err) {
+    console.error("Error:", err.message);
+    res.status(500).json({ error: "Internal server error" });
   }
 };
+
+module.exports = { reviewCode };

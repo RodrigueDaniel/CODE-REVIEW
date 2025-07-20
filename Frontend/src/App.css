@@ -1,59 +1,79 @@
 * {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
-}
-
-html,
-body,
-#root {
-  height: 100%;
-  width: 100%;
-}
-
-main {
-  height: 100%;
-  width: 100%;
-  padding: 1.5rem;
-  display: flex;
-  gap: 1rem;
-}
-
-main .left,
-main .right {
-  height: 100%;
-  flex-basis: 50%;
-  border-radius: 1rem;
-}
-main .left{
-  background-color: #000000;
-  position: relative;
-}
-
-.left .code, .code pre, .code pre code{
-  height: 100%;
-  width: 100%;
   margin: 0;
-  border-radius: 1rem;
-  background-color: #0c0c0c;
+  padding: 0;
 }
 
-main .left .review{
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  background-color: rgb(219, 219, 255);
-  color: #000000;
-  padding: 0.5rem 2rem;
-  font-weight: 500;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+.css-b62m3t-container {
+  width: 65%;
+}
+
+.css-1mi3hag-control {
+  width: 100%;
+}
+
+.css-sl4pg4-control {
+  width: 30% !important;
+}
+
+.btnNormal {
+  padding: 10px;
+  color: #fff;
+  border-radius: 10px;
+  border: 0;
+  outline: 0;
   cursor: pointer;
-  user-select: none;
-  border-radius: 0.7rem;
 }
 
-main .right{
-  background-color: #343434;
-  padding: 1rem 2rem;
-  font-size: 1rem;
+p {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  color: gray;
+}
+
+p > strong {
+  font-size: 20px !important;
+  color: #fff;
+}
+
+ul li {
+  color: gray;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  list-style: circle !important;
+}
+
+li strong {
+  color: #fff;
+}
+
+pre {
+  background-color: #121214 !important;
+  padding: 10px;
+  color: #fff;
   overflow: auto;
+}
+
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030303;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #212121;
 }
