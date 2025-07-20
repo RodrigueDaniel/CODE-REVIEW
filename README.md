@@ -21,28 +21,28 @@ An AI-powered code review tool that helps developers get instant feedback on the
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/ai-code-reviewer.git
-cd ai-code-reviewer
+git clone https://github.com/RodrigueDaniel/CODE-REVIEW.git
+cd CODE-REVIEW
 ```
 
 ### 2. Set up the backend (API key required)
 ```bash
-cd server
+cd BackEnd
 npm install
 touch .env
 ```
-In .env
+Inside .env, add your OpenAI key:
 ```bash
 OPENAI_API_KEY=your_openai_key_here
 ```
-Run
+Run the backend (runs in port 5000)
 ```bash
-node index.js
+node server.js
 ```
 
 ### 3. Start the frontend
 ```bash
-cd ../client
+cd ../Frontend
 npm install
 npm run dev
 ```
