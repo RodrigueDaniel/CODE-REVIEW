@@ -82,8 +82,10 @@ const App = () => {
     setLoading(true);
     setResponse('');
 
+    const backendURL = import.meta.env.VITE_REACT_APP_BACKEND_URL;
+
     try {
-      const res = await axios.post('http://localhost:5000/api/review', {
+      const res = await axios.post(`${backendURL}/api/review`, {
         code,
         language: selectedOption.value,
       });
